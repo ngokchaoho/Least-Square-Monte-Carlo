@@ -4,7 +4,7 @@
 ## About this project
 
 
-- Team **HO Ngok Chao, GAO Jisan, CHENG Toyuan**
+- Team **HO Ngok Chao, GAO Jishen, CHENG Tuoyuan**
 
 - **Summary**: This notebook in **Python 3** is to serve as part of the final report together with source code for your project, stating the logic of the derivation of pricing method (if not discussed in class).
 

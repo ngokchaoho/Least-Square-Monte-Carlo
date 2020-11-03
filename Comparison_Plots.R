@@ -244,23 +244,39 @@ ContourPlots <- function(
     
     if (is.null(scale_range)) {
         temp_p <- temp_p +
-            ggplot2::scale_fill_gradientn(
-                colours = lut_16,
+            ggplot2::scale_fill_gradient2(
+                low = 'blue', high = 'red', mid = 'white', midpoint = 0,
                 # colours = colorRamps::matlab.like(300)
                 guide = ggplot2::guide_colourbar(
                     raster = T, frame.colour = "black", frame.linewidth = 1
                 ), na.value = 'white'
             )
+            # ggplot2::scale_fill_gradientn(
+            #     colours = lut_16,
+            #     # colours = colorRamps::matlab.like(300)
+            #     guide = ggplot2::guide_colourbar(
+            #         raster = T, frame.colour = "black", frame.linewidth = 1
+            #     ), na.value = 'white'
+            # )
     }else if (length(scale_range) == 2) {
         temp_p <- temp_p +
-            ggplot2::scale_fill_gradientn(
+            ggplot2::scale_fill_gradient2(
                 limits = c(scale_range[1], scale_range[2]),
-                colours = lut_16,
+                low = 'blue', high = 'red', mid = 'white', midpoint = 0,
+                # colours = lut_16,
                 # colours = colorRamps::matlab.like(300)
                 guide = ggplot2::guide_colourbar(
                     raster = T, frame.colour = "black", frame.linewidth = 1
                 ), na.value = 'white'
             )
+            # ggplot2::scale_fill_gradientn(
+            #     limits = c(scale_range[1], scale_range[2]),
+            #     colours = lut_16,
+            #     # colours = colorRamps::matlab.like(300)
+            #     guide = ggplot2::guide_colourbar(
+            #         raster = T, frame.colour = "black", frame.linewidth = 1
+            #     ), na.value = 'white'
+            # )
     }
     
     if (flag_save_plot) {

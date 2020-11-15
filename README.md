@@ -1,6 +1,9 @@
 ****
 # Project1 of FE5222
 ****
+## Error (Todo)
+- Currently all paths are used in regression, while usually LSTM only regress on ITM paths. 
+
 ## About this project
 
 
